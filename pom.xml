@@ -1,0 +1,9 @@
+<!--
+    This placeholder pom allows me to open and manage this project folder using Intellij.
+    This supports much better VCS utilities that visual studio.
+-->
+<project>
+	<groupId>fred.haslam</groupId>
+	<artifactId>DragonCourtFireFight</artifactId>
+	<version>0.0.1</version>
+</project>
