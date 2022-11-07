@@ -17,6 +17,8 @@ namespace Model {
 
 		public TileEnum Type { get; internal set; }
 
+		public TileAttributes Attributes { get { return TileAttributes.Get(Type); } }
+
 		public UnitEnum Unit { get; set; } = UnitEnum.None;
 
 		// how much can burn in the tile
@@ -45,6 +47,8 @@ namespace Model {
 
 		// how much of the tile is on fire.
 		public float Engagement { get; set; } = 0f;
+
+		public Mob Mob { get; set; } = null;
 
 	}
 }

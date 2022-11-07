@@ -57,14 +57,14 @@ public class GameHandlerController : MonoBehaviour
         burntPrefab = new GameObject[4];
         for (int ix=0;ix<4;ix++) burntPrefab[ix] = Resources.Load( "Fire/Burnt"+(1+ix)+"_PF");
 
-		//world = TileMapFactory.BuildVillage( MAP_WIDE, MAP_TALL );
-		world = TileMapFactory.BuildOneType(MAP_WIDE, MAP_TALL, TileEnum.Field);
+		world = TileMapFactory.BuildVillage( MAP_WIDE, MAP_TALL );
+		//world = TileMapFactory.BuildOneType(MAP_WIDE, MAP_TALL, TileEnum.Field);
 		//world = TileMapFactory.BuildTwoType( MAP_WIDE, MAP_TALL, TileEnum.Grass, TileEnum.Woods );
-		//world = TileMapFactory.BuildQuarters( MAP_WIDE, MAP_TALL );
+		//world = TileMapFactory.BuildQuarters(MAP_WIDE, MAP_TALL);
 		//world = TileMapFactory.BlueNoisePoints( MAP_WIDE, MAP_TALL );
-		//world = TileMapFactory.FloodFillMap( MAP_WIDE, MAP_TALL );
+		//world = TileMapFactory.FloodFillMap(MAP_WIDE, MAP_TALL);
 
-        advancer = new AdvancePlay_v4(world);
+		advancer = new AdvancePlay_v4(world);
 
         BuildWorldTiles();
 

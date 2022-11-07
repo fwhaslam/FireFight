@@ -80,25 +80,32 @@ namespace Algorithms {
 				var fire = tile.Engagement;
 				if ( fire == 0f ) continue;
 
+				var spread = tile.Attributes.Spread;
+				var advance = base_spread * spread;
+				var heat = tile.Attributes.Heat;
+
 				// fix self
-				if ( fire + base_spread >= 1f ) {
+				if ( fire + advance >= 1f ) {
 					tile.Temp = 1f;
 				}
 
 				// orthoganol overlap
-				var overlap = tile.Engagement + ( base_spread * 1f ) - 1f;
+				var overlap = tile.Engagement + ( advance * 1f ) - 1f;
+				overlap = overlap / spread;		// normalize
+
 				if (overlap>0f) foreach (var delta in ORTH_STEPS ) {
 					var work = map.GetTile(dw+delta.X,dt+delta.Y);
-					if (work==null) continue;
-					work.Temp = Merge(work.Temp,overlap);
+					if (work==null || heat<work.Attributes.Ignite) continue;
+					work.Temp = Merge(work.Temp,overlap*work.Attributes.Spread);
 				}
 					
 				// diagonal overlap
-				overlap = tile.Engagement + ( base_spread * 0.33f ) - 1f;
+				overlap = tile.Engagement + ( advance * 0.33f ) - 1f;
+				overlap = overlap / spread;		// normalize
 				if (overlap>0f) foreach (var delta in DIAG_STEPS ) {
 					var work = map.GetTile(dw+delta.X,dt+delta.Y);
-					if (work==null) continue;
-					work.Temp = Merge(work.Temp,overlap);
+					if (work==null || heat<work.Attributes.Ignite) continue;
+					work.Temp = Merge(work.Temp,overlap*work.Attributes.Spread);
 				}
 			}
 

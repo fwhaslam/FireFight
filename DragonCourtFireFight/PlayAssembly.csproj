@@ -57,25 +57,31 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\ArenaController.cs" />
+    <Compile Include="Assets\Scripts\Model\Mob.cs" />
     <Compile Include="Assets\Scripts\Model\UnitEnum.cs" />
     <Compile Include="Assets\Scripts\FlameScript.cs" />
+    <Compile Include="Assets\Scripts\Model\AdvancePlayIf.cs" />
+    <Compile Include="Assets\Scripts\Algorithms\BlueNoisePoints.cs" />
+    <Compile Include="Assets\Scripts\Model\ModelSettings.cs" />
     <Compile Include="Assets\Scripts\DisplayController.cs" />
     <Compile Include="Assets\Scripts\TileEnumToSprite.cs" />
     <Compile Include="Assets\Scripts\Model\TileMapFactory.cs" />
+    <Compile Include="Assets\Scripts\Algorithms\AdvancePlay.cs" />
+    <Compile Include="Assets\Scripts\Model\ActionEnum.cs" />
+    <Compile Include="Assets\Scripts\Algorithms\AdvancePlay_v2.cs" />
+    <Compile Include="Assets\Scripts\Model\MobAttributes.cs" />
+    <Compile Include="Assets\Scripts\Algorithms\AdvancePlay_v1.cs" />
+    <Compile Include="Assets\Scripts\Algorithms\AdvancePlay_v3.cs" />
     <Compile Include="Assets\Scripts\Model\Where.cs" />
+    <Compile Include="Assets\Scripts\Model\MobEnum.cs" />
     <Compile Include="Assets\Scripts\Model\TileEnum.cs" />
     <Compile Include="Assets\Scripts\GameHandlerController.cs" />
+    <Compile Include="Assets\Scripts\Model\ActionAttributes.cs" />
+    <Compile Include="Assets\Scripts\ActionEnumToSprite.cs" />
     <Compile Include="Assets\Scripts\Model\PlayMap.cs" />
+    <Compile Include="Assets\Scripts\Algorithms\FillFromPoints.cs" />
     <Compile Include="Assets\Scripts\Model\TileAttributes.cs" />
     <Compile Include="Assets\Scripts\Model\PlayTile.cs" />
-    <Compile Include="Assets\Scripts\Model\ModelSettings.cs" />
-    <Compile Include="Assets\Scripts\Algorithms\BlueNoisePoints.cs" />
-    <Compile Include="Assets\Scripts\Algorithms\FillFromPoints.cs" />
-    <Compile Include="Assets\Scripts\Model\AdvancePlayIf.cs" />
-    <Compile Include="Assets\Scripts\Algorithms\AdvancePlay.cs" />
-    <Compile Include="Assets\Scripts\Algorithms\AdvancePlay_v3.cs" />
-    <Compile Include="Assets\Scripts\Algorithms\AdvancePlay_v1.cs" />
-    <Compile Include="Assets\Scripts\Algorithms\AdvancePlay_v2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\PlayAssembly.asmdef" />

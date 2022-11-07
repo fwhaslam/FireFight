@@ -34,6 +34,10 @@ namespace Model {
 			return Grid[x,y];
 		}
 
+		public void AddMob( MobEnum type, int x, int y ) {
+			Grid[x,y].Mob = new Mob(type);
+		}
+
 		public void AddSpark( int x, int y ) {
 
 			var tile = Grid[x,y];

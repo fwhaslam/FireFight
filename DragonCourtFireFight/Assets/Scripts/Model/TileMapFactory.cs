@@ -78,7 +78,7 @@ Debug.Log("CENTER = "+center.X+" "+center.Y );
 			return map;
 		}
 
-		static readonly TileEnum[] Quarters = { Field, Shrubs, Woods, Stone };
+		static readonly TileEnum[] Quarters = { Field, Shrubs, Stone, Woods };
 
 		static public PlayMap BuildQuarters( int wide, int tall ) {
 
@@ -92,7 +92,7 @@ Debug.Log("CENTER = "+center.X+" "+center.Y );
 				map.Grid[ix,iy] = new PlayTile( Quarters[index] );
 			}
 
-			map.AddSpark( w2, t2 );
+			map.AddSpark( wide/4, tall/4 );
 
 			return map;
 		}
@@ -141,13 +141,13 @@ Debug.Log("CENTER = "+center.X+" "+center.Y );
 
 				case 0: return TileEnum.Field;
 				case 1: return TileEnum.Grass;
-				case 2: return TileEnum.Woods;
-				case 3: return TileEnum.Forest;
+				case 2: return TileEnum.Shrubs;
+				case 3: return TileEnum.Woods;
 
-				case 4: return TileEnum.Stone;
-				case 5: return TileEnum.Road;
-				case 6: return TileEnum.River;
-				default: return TileEnum.Wall;
+				case 4: return TileEnum.Forest;
+				case 5: return TileEnum.Cottage;
+				case 6: return TileEnum.Road;
+				default: return TileEnum.Stone;
 
 			}
 		}
